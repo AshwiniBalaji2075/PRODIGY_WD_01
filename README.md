@@ -65,3 +65,6 @@ The JavaScript code, placed at the end of the `body` section, handles the follow
 - **Colors**: You can change the colors of the navigation bar, links, and sections by modifying the CSS in the `<style>` tag.
 - **Font**: Change the font family by editing the `font-family` property in the body style.
 - **Sections**: Add or remove sections in the content area by adding or removing `<section>` elements within the `div` with `id="content"`.
+
+## Deployment 
+ https://ashwinibalaji2075.github.io/PRODIGY_WD_01/
