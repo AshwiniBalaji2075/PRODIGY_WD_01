@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Navigation Menu</title>
+    <style>
+        body {
+            font-family: 'Times New Roman';
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: lavender;
+            padding: 10px 0;
+            transition: background-color 0.3s ease;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: burlywood;
+            color: rgb(204, 153, 204) ;
+            font-size: 18px;
+            padding: 10px 15px;
+            transition: color 0.3s ease, background-color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background-color: whitesmoke;
+            color: blueviolet;
+            border-radius: 5px;
+        }
+
+        #content {
+            padding-top: 70px; /* Height of the navbar */
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        section {
+            padding: 300px 20px;
+            height: 100vh
+            text-align: center;
+        }
+
+        #home {
+            background-color: skyblue;
+        }
+
+        #services {
+            background-color: cyan;
+        }
+
+        #about {
+            background-color: lightcyan;
+        }
+
+        #contact {
+            background-color: aquamarine;
+        }
+
+        .scrolled {
+            background-color: #222 !important;
+        }
+    </style>
+</head>
+<body>
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#services">SERVICES</a></li>
+            <li><a href="#about">AOBUT</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        <section id="home">
+            <h1><b>HOME</b></h1>
+            <p>Welcome to our website!</p>
+        </section>
+        <section id="services">
+            <h1><b>SERVICES</b></h1>
+            <p>Here are the services we offer.</p>
+        </section>
+        <section id="about">
+            <h1><b>ABOUT US</b></h1>
+            <p>Learn more about us.</p>
+        </section>
+        <section id="contact">
+            <h1><b>CONTACT</b></h1>
+            <p>Get in touch with us.</p>
+        </section>
+    </div>
+
+    <script>
+        window.onscroll = function() {
+            var navbar = document.getElementById("navbar");
+            if (window.pageYOffset > 50) {
+                navbar.classList.add("scrolled");
+            } else {
+                navbar.classList.remove("scrolled");
+            }
+        };
+    </script>
+</body>
+</html>
